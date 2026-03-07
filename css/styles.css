@@ -253,6 +253,22 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   padding: 0 1.5rem;
   text-align: center;
 }
+.hero__logos {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
+  margin-bottom: 2.5rem;
+  flex-wrap: wrap;
+}
+.hero__logo {
+  height: 70px;
+  width: auto;
+  object-fit: contain;
+}
+.hero__logo--congreso {
+  height: 80px;
+}
 .hero__badge {
   display: inline-block;
   background: rgba(30,50,100,0.08);
@@ -713,16 +729,20 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   gap: 2.5rem;
   margin-bottom: 2rem;
   flex-wrap: wrap;
+  background: var(--white);
+  padding: 1.5rem 2rem;
+  border-radius: 16px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .footer__logo {
-  height: 50px;
+  height: 55px;
   width: auto;
   object-fit: contain;
-  filter: brightness(0) invert(1);
-  opacity: 0.8;
-  transition: opacity 0.3s;
+  transition: transform 0.3s;
 }
-.footer__logo:hover { opacity: 1; }
+.footer__logo:hover { transform: scale(1.05); }
 .footer__text {
   font-size: 0.9rem;
   margin-bottom: 1rem;
@@ -900,8 +920,11 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .registration__amount { font-size: 2rem; }
 
   /* Footer mobile */
-  .footer__logos { gap: 1.5rem; }
-  .footer__logo { height: 35px; }
+  .hero__logos { gap: 1.5rem; }
+  .hero__logo { height: 50px; }
+  .hero__logo--congreso { height: 60px; }
+  .footer__logos { gap: 1.5rem; padding: 1rem 1.5rem; }
+  .footer__logo { height: 40px; }
 
   /* Orbs smaller on mobile */
   .orb { opacity: 0.2; }
