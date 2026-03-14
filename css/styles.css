@@ -336,6 +336,27 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
 }
 
 /* ==========================================================================
+   Visual Banner
+   ========================================================================== */
+.visual-banner {
+  padding: 2rem 0 0;
+  position: relative;
+  z-index: 1;
+}
+.visual-banner__img {
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 32px rgba(30, 50, 100, 0.12);
+}
+
+@media (max-width: 768px) {
+  .visual-banner__img {
+    max-width: 90%;
+  }
+}
+
+/* ==========================================================================
    Impact Section
    ========================================================================== */
 .impact {
