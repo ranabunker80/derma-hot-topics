@@ -760,7 +760,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   margin-right: auto;
 }
 .footer__logo {
-  height: 55px;
+  height: 80px;
   width: auto;
   object-fit: contain;
   transition: transform 0.3s;
