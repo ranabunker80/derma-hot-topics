@@ -194,8 +194,10 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   justify-content: space-between;
 }
 .nav__logo {
-  height: 60px;
+  height: 80px;
   width: auto;
+  object-fit: contain;
+  object-position: center;
 }
 .nav__links {
   display: flex;
