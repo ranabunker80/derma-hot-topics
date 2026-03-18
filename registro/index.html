@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Registro — Dermatología en Atención Primaria: Hot Topics</title>
+  <meta name="description" content="Inscríbete al curso precongreso Dermatología en Atención Primaria: Hot Topics. 15 de abril, 2026. CINTERMEX, Monterrey." />
+
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Outfit:wght@400;500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --navy: #1e3264;
+      --navy-dark: #142248;
+      --teal: #3aa89f;
+      --teal-dark: #2e8a82;
+      --cream: #fdfbf7;
+      --white: #ffffff;
+      --text: #2a2a3a;
+      --text-light: #5a5a7a;
+      --mint: #a8e0d0;
+      --mint-light: #d2f0e8;
+      --lavender: #d8c8e8;
+      --peach: #f8dcc8;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--cream);
+      color: var(--text);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+
+    /* Header */
+    .header {
+      background: var(--navy-dark);
+      padding: 1rem 2rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1rem;
+    }
+
+    .header__brand {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .header__title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.3rem;
+      font-weight: 900;
+      color: var(--white);
+      text-decoration: none;
+    }
+
+    .header__title span {
+      color: var(--teal);
+    }
+
+    .header__subtitle {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.6);
+      font-weight: 500;
+    }
+
+    .header__back {
+      color: var(--teal);
+      text-decoration: none;
+      font-weight: 600;
+      font-size: 0.9rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: color 0.2s;
+    }
+
+    .header__back:hover { color: var(--mint); }
+
+    /* Info Banner */
+    .info-banner {
+      background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+      padding: 2rem 2rem 1.5rem;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .info-banner::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      right: -10%;
+      width: 300px;
+      height: 300px;
+      border-radius: 50%;
+      background: var(--teal);
+      opacity: 0.08;
+    }
+
+    .info-banner__title {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.6rem;
+      font-weight: 900;
+      color: var(--white);
+      margin-bottom: 0.5rem;
+    }
+
+    .info-banner__meta {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      flex-wrap: wrap;
+      margin-bottom: 1rem;
+    }
+
+    .info-banner__meta-item {
+      color: rgba(255,255,255,0.8);
+      font-size: 0.85rem;
+      display: flex;
+      align-items: center;
+      gap: 0.3rem;
+    }
+
+    .info-banner__note {
+      background: rgba(58, 168, 159, 0.15);
+      border: 1px solid rgba(58, 168, 159, 0.3);
+      border-radius: 8px;
+      padding: 0.75rem 1.5rem;
+      display: inline-block;
+      color: var(--mint-light);
+      font-size: 0.85rem;
+      margin-top: 0.5rem;
+    }
+
+    .info-banner__note strong {
+      color: var(--white);
+    }
+
+    /* Steps */
+    .steps {
+      background: var(--white);
+      border-bottom: 1px solid rgba(0,0,0,0.06);
+      padding: 1rem 2rem;
+    }
+
+    .steps__list {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      list-style: none;
+      flex-wrap: wrap;
+    }
+
+    .steps__item {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      font-size: 0.85rem;
+      color: var(--text-light);
+    }
+
+    .steps__number {
+      width: 24px;
+      height: 24px;
+      border-radius: 50%;
+      background: var(--teal);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+    }
+
+    .steps__item--active .steps__number {
+      background: var(--navy);
+      box-shadow: 0 0 0 3px rgba(30,50,100,0.2);
+    }
+
+    .steps__item--active {
+      color: var(--navy);
+      font-weight: 600;
+    }
+
+    /* Iframe container */
+    .form-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 1.5rem;
+    }
+
+    .form-frame {
+      width: 100%;
+      max-width: 700px;
+      min-height: 800px;
+      border: 1px solid rgba(0,0,0,0.08);
+      border-radius: 12px;
+      background: var(--white);
+      box-shadow: 0 4px 24px rgba(0,0,0,0.06);
+      overflow: hidden;
+    }
+
+    .form-frame iframe {
+      width: 100%;
+      height: 900px;
+      border: none;
+    }
+
+    .form-fallback {
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .form-fallback__link {
+      display: inline-block;
+      background: var(--teal);
+      color: var(--white);
+      padding: 0.75rem 2rem;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .form-fallback__link:hover {
+      background: var(--teal-dark);
+    }
+
+    .form-fallback__note {
+      margin-top: 0.75rem;
+      font-size: 0.8rem;
+      color: var(--text-light);
+    }
+
+    /* Pricing quick reference */
+    .pricing-ref {
+      max-width: 700px;
+      width: 100%;
+      margin: 0 auto 1.5rem;
+      background: var(--white);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+      border: 1px solid rgba(0,0,0,0.08);
+      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    }
+
+    .pricing-ref__title {
+      font-weight: 700;
+      font-size: 0.9rem;
+      color: var(--navy);
+      margin-bottom: 0.75rem;
+    }
+
+    .pricing-ref__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      gap: 0.5rem;
+    }
+
+    .pricing-ref__item {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.4rem 0;
+      border-bottom: 1px solid rgba(0,0,0,0.04);
+      font-size: 0.85rem;
+    }
+
+    .pricing-ref__item-name { color: var(--text-light); }
+    .pricing-ref__item-price { font-weight: 600; color: var(--navy); }
+
+    /* Help bar */
+    .help-bar {
+      max-width: 700px;
+      width: 100%;
+      margin: 0 auto 1.5rem;
+      text-align: center;
+      padding: 1rem;
+      background: var(--mint-light);
+      border-radius: 8px;
+      font-size: 0.85rem;
+      color: var(--text);
+    }
+
+    .help-bar a {
+      color: var(--teal-dark);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    /* Footer */
+    .footer {
+      background: var(--navy-dark);
+      padding: 1.5rem 2rem;
+      text-align: center;
+    }
+
+    .footer__logos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem;
+      margin-bottom: 0.75rem;
+    }
+
+    .footer__logos img {
+      height: 40px;
+      width: auto;
+      opacity: 0.85;
+    }
+
+    .footer__text {
+      font-size: 0.75rem;
+      color: rgba(255,255,255,0.5);
+    }
+
+    @media (max-width: 600px) {
+      .info-banner__title { font-size: 1.3rem; }
+      .header { padding: 0.75rem 1rem; }
+      .form-container { padding: 1rem 0.5rem; }
+      .form-frame iframe { height: 1000px; }
+      .steps__list { gap: 1rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="header__brand">
+      <a href="../" class="header__title">Hot <span>Topics</span></a>
+      <span class="header__subtitle">Precongreso XXXII Congreso SMD</span>
+    </div>
+    <a href="../" class="header__back">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 19l-7-7 7-7"/></svg>
+      Volver al programa
+    </a>
+  </header>
+
+  <!-- Info Banner -->
+  <div class="info-banner">
+    <h1 class="info-banner__title">Registro al Curso Precongreso</h1>
+    <div class="info-banner__meta">
+      <span class="info-banner__meta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"/><line x1="16" y1="2" x2="16" y2="6"/><line x1="8" y1="2" x2="8" y2="6"/><line x1="3" y1="10" x2="21" y2="10"/></svg>
+        15 de abril, 2026
+      </span>
+      <span class="info-banner__meta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        CINTERMEX, Monterrey
+      </span>
+      <span class="info-banner__meta-item">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+        9:00 AM - 5:00 PM
+      </span>
+    </div>
+    <div class="info-banner__note">
+      En el formulario, selecciona el precongreso <strong>"Dermatología para Médicos Generales"</strong> para inscribirte a Hot Topics
+    </div>
+  </div>
+
+  <!-- Steps -->
+  <div class="steps">
+    <ol class="steps__list">
+      <li class="steps__item steps__item--active">
+        <span class="steps__number">1</span>
+        Llena tus datos
+      </li>
+      <li class="steps__item">
+        <span class="steps__number">2</span>
+        Selecciona "Dermatología para Médicos Generales"
+      </li>
+      <li class="steps__item">
+        <span class="steps__number">3</span>
+        Realiza tu pago
+      </li>
+    </ol>
+  </div>
+
+  <!-- Main Content -->
+  <main class="form-container">
+    <!-- Pricing Quick Reference -->
+    <div class="pricing-ref">
+      <div class="pricing-ref__title">Precios del Precongreso Hot Topics</div>
+      <div class="pricing-ref__grid">
+        <div class="pricing-ref__item">
+          <span class="pricing-ref__item-name">Socios SMD (al corriente)</span>
+          <span class="pricing-ref__item-price">$2,000</span>
+        </div>
+        <div class="pricing-ref__item">
+          <span class="pricing-ref__item-name">Socios (no al corriente)</span>
+          <span class="pricing-ref__item-price">$2,000</span>
+        </div>
+        <div class="pricing-ref__item">
+          <span class="pricing-ref__item-name">No Socios</span>
+          <span class="pricing-ref__item-price">$2,000</span>
+        </div>
+        <div class="pricing-ref__item">
+          <span class="pricing-ref__item-name">Médicos Generales</span>
+          <span class="pricing-ref__item-price">$1,500</span>
+        </div>
+        <div class="pricing-ref__item">
+          <span class="pricing-ref__item-name">Residentes</span>
+          <span class="pricing-ref__item-price">$1,000</span>
+        </div>
+        <div class="pricing-ref__item">
+          <span class="pricing-ref__item-name">Estudiantes de Medicina</span>
+          <span class="pricing-ref__item-price">$500</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Embedded Form -->
+    <div class="form-frame">
+      <iframe
+        src="https://registrosycongresos.com/Registro/SMDAC2026"
+        title="Formulario de registro al XXXII Congreso SMD"
+        loading="lazy"
+        allow="payment"
+        sandbox="allow-scripts allow-forms allow-same-origin allow-popups allow-popups-to-escape-sandbox"
+      ></iframe>
+    </div>
+
+    <!-- Fallback -->
+    <div class="form-fallback">
+      <p style="margin-bottom: 0.75rem; font-size: 0.9rem; color: var(--text-light);">
+        Si el formulario no carga correctamente, puedes registrarte directamente:
+      </p>
+      <a href="https://registrosycongresos.com/Registro/SMDAC2026" target="_blank" rel="noopener noreferrer" class="form-fallback__link">
+        Ir al registro externo
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="vertical-align: middle; margin-left: 4px;"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+      </a>
+      <p class="form-fallback__note">registrosycongresos.com — Plataforma oficial de registro del congreso SMD</p>
+    </div>
+
+    <!-- Help -->
+    <div class="help-bar">
+      <strong>Necesitas ayuda con tu registro?</strong>
+      Escríbenos a <a href="mailto:inscripcioncongreso@smdac.com.mx">inscripcioncongreso@smdac.com.mx</a>
+      o manda WhatsApp al <a href="https://wa.me/5215549197995">55 4919 7995</a>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer__logos">
+      <img src="../assets/logos/smd-logo.png" alt="SMD" onerror="this.style.display='none'" />
+      <img src="../assets/logos/smd-congreso-logo.png" alt="XXXII Congreso SMD" onerror="this.style.display='none'" />
+      <img src="../assets/logos/cmdnl-logo.png" alt="CMDNL" onerror="this.style.display='none'" />
+    </div>
+    <p class="footer__text">
+      Precongreso del XXXII Congreso Mexicano de la Sociedad Mexicana de Dermatología
+      <br />Organizado por la SMD y el Colegio de Médicos Dermatólogos de Nuevo León, A.C.
+    </p>
+  </footer>
+
+</body>
+</html>
