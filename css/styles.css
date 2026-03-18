@@ -733,6 +733,18 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   font-weight: 500;
 }
 .registration__card .btn { position: relative; z-index: 1; }
+.registration__redirect-note {
+  margin-top: 0.75rem;
+  font-size: 0.8rem;
+  color: var(--mint-light);
+  opacity: 0.7;
+}
+.hero__redirect-note {
+  margin-top: 0.5rem;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  opacity: 0.7;
+}
 
 /* ==========================================================================
    Footer

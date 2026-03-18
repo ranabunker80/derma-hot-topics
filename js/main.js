@@ -80,20 +80,15 @@ function initNavigation() {
       toggle.classList.remove('nav__toggle--active');
       links.classList.remove('nav__links--open');
 
-      // Handle CTA nav link
-      if (link.classList.contains('nav__cta')) {
-        e.preventDefault();
-        openModal('modalInscripcion');
-      }
+      // CTA nav link now goes directly to external registration
+      // No modal needed
     });
   });
 }
 
 /* ---------- Modals ---------- */
 function initModals() {
-  // CTA buttons open inscription modal
-  document.getElementById('heroCta').addEventListener('click', () => openModal('modalInscripcion'));
-  document.getElementById('registroCta').addEventListener('click', () => openModal('modalInscripcion'));
+  // CTA buttons are now direct links to external registration — no modal needed
 
   // Privacy button
   document.getElementById('privacyBtn').addEventListener('click', () => openModal('modalPrivacidad'));
