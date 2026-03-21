@@ -194,7 +194,7 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   justify-content: space-between;
 }
 .nav__logo {
-  height: 80px;
+  height: 110px;
   width: auto;
   object-fit: contain;
   object-position: center;
@@ -954,10 +954,12 @@ button { cursor: pointer; border: none; background: none; font-family: inherit; 
   .registration__card { padding: 3rem 1.5rem; }
   .registration__amount { font-size: 2rem; }
 
+  /* Nav mobile */
+  .nav__logo { height: 80px; }
+
   /* Footer mobile */
   .hero__logos { gap: 1.5rem; }
   .hero__logo { height: 50px; }
-  .hero__logo--congreso { height: 60px; }
   .footer__logos { gap: 1.5rem; padding: 1rem 1.5rem; }
   .footer__logo { height: 40px; }
 
